@@ -1,9 +1,10 @@
 <h1>About</h1>
 <p>cmsimde_site</p>
 <h1>run</h1>
+<p><button id="test">test</button>
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
-<!-- for ggame -->
+<!-- for ggame --></p>
 <p>
 <script src="/static/jquery-3.3.1.min.js"></script>
 <script src="/static/jquery-ui.1.12.1.min.js"></script>
@@ -12,14 +13,14 @@
 <script src="/static/bs.js"></script>
 <script src="/downloads/brython_modules.js"></script>
 </p>
-<!-- Cango 程式庫 -->
+<p><!-- Cango 程式庫 --></p>
 <p>
 <script src="/static/Cango-24v03-min.js"></script>
 <script src="/static/CangoAxes-6v01-min.js"></script>
 <script src="/static/gearUtils-09.js"></script>
 <script src="/static/SVGpathUtils-6v03-min.js"></script>
 </p>
-<!-- for Konva 程式庫 -->
+<p><!-- for Konva 程式庫 --></p>
 <p>
 <script src="/static/konva.min.js"></script>
 <script>
@@ -109,3 +110,14 @@ print("Python keywords: ", keyword.kwlist)
 # id 為 "keyword" 的按鈕點按時, 執行 kw1 物件中的 prog 方法
 </script>
 </p>
+<p>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/shih1717/5d9364fbc8cb19bb21b738a079099276/raw/14790642a1ab135444a2e6a0bb4d60eb8880f7c2/w13-3"
+src = open(url).read()
+test = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["test"].bind("click", test.prog)
+</script>
+</p>
+<h1>H1 midterm</h1>
