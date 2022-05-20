@@ -140,7 +140,7 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">run << <a href='run.html'>Previous</a> <a href='midterm.html'>Next</a> >> midterm<br /><h1>w13</h1>
-<!-- 導入 brython 程式庫 -->
+<p><button id="Tetris">Tetris-1</button> <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
 <!-- 啟動 Brython -->
@@ -149,7 +149,9 @@ window.onload=function(){
 brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 }
 </script>
+</p>
 <div id="brython_div"></div>
+<p>
 <script type="text/python">
 # from https://levelup.gitconnected.com/writing-tetris-in-python-2a16bddb5318
 # 暫時關閉 system proxy 設定後,  pip install pygame
@@ -377,7 +379,16 @@ def do_game():
 doc.addEventListener("keydown", key_down)
 doc.addEventListener("keyup", key_up)
 browser.timer.set_interval(do_game, fps)
-</script><br />run << <a href='run.html'>Previous</a> <a href='midterm.html'>Next</a> >> midterm</div>
+</script>
+<script type="text/python3">
+import beditor
+from browser import document
+url = "https://gist.githubusercontent.com/shih1717/c7229346d517b478d1cbff756036e332/raw/4d82dd7111071e4a972800aa682a10cf4b4fc1d1/Tetris"
+src = open(url).read()
+Tetris = beditor.editor(src, "kw_editor", "kw_console", "kw__container", "kw_py_src")
+document["Tetris"].bind("click", Tetris.prog)
+</script>
+</p><br />run << <a href='run.html'>Previous</a> <a href='midterm.html'>Next</a> >> midterm</div>
         
     <!-- footer -->
       <div class="container">
