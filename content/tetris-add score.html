@@ -128,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='run.html'>run</a><li class='has-children'><a href='w13.html'>w13</a><ul class='dropdown'><li><a href='tetris-add score(考試用).html'>tetris-add score(考試用)</a><li><a href='tetris-add score.html'>tetris-add score</a></li></ul><li><a href='W14.html'>W14</a><li><a href='progress rate.html'>progress rate</a><li><a href='midterm.html'>midterm</a></li>
+                     <li><a href='About.html'>About</a><li><a href='run.html'>run</a><li class='has-children'><a href='w13.html'>w13</a><ul class='dropdown'><li><a href='tetris-add score(考試用).html'>tetris-add score(考試用)</a><li><a href='tetris-add score.html'>tetris-add score</a><li><a href='tetris-add score normal.html'>tetris-add score normal</a></li></ul><li><a href='W14.html'>W14</a><li><a href='progress rate.html'>progress rate</a><li><a href='midterm.html'>midterm</a></li>
                       </ul>
                 </nav>
               </div>
@@ -139,7 +139,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">tetris-add score(考試用) << <a href='tetris-add score(考試用).html'>Previous</a> <a href='W14.html'>Next</a> >> W14<br /><h1>tetris-add score</h1>
+    <div id="tipue_search_content">tetris-add score(考試用) << <a href='tetris-add score(考試用).html'>Previous</a> <a href='tetris-add score normal.html'>Next</a> >> tetris-add score normal<br /><h1>tetris-add score</h1>
 <p>R=旋轉 D=下墜</p>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
@@ -311,7 +311,7 @@ WHITE = '#%02x%02x%02x' % (255, 255, 255)
 GRAY = '#%02x%02x%02x' % (128, 128, 128)
 
 done = False
-fps = 60
+fps = 25
 game = Tetris(20, 10)
 counter = 0
 
@@ -393,7 +393,8 @@ brython_div <= score_doc
 doc.addEventListener("keydown", key_down)
 doc.addEventListener("keyup", key_up)
 browser.timer.set_interval(do_game, fps)
-</script><br />tetris-add score(考試用) << <a href='tetris-add score(考試用).html'>Previous</a> <a href='W14.html'>Next</a> >> W14</div>
+</script>
+<br />tetris-add score(考試用) << <a href='tetris-add score(考試用).html'>Previous</a> <a href='tetris-add score normal.html'>Next</a> >> tetris-add score normal</div>
         
     <!-- footer -->
       <div class="container">

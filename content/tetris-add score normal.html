@@ -139,7 +139,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w13 << <a href='w13.html'>Previous</a> <a href='tetris-add score.html'>Next</a> >> tetris-add score<br /><h1>tetris-add score(考試用)</h1>
+    <div id="tipue_search_content">tetris-add score << <a href='tetris-add score.html'>Previous</a> <a href='W14.html'>Next</a> >> W14<br /><h1>tetris-add score normal</h1>
+<p>R=旋轉 D=下墜</p>
 <!-- 導入 brython 程式庫 -->
 <script src="./../cmsimde/static/brython.js"></script>
 <script src="./../cmsimde/static/brython_stdlib.js"></script>
@@ -184,7 +185,13 @@ class Figure:
     y = 0
 
     figures = [
-       [[1, 5, 9, 13], [4, 5, 6, 7]],
+        [[1, 5, 9, 13], [4, 5, 6, 7]],
+        [[4, 5, 9, 10], [2, 6, 5, 9]],
+        [[6, 7, 9, 10], [1, 5, 6, 10]],
+        [[1, 2, 5, 9], [0, 4, 5, 6], [1, 5, 9, 8], [4, 5, 6, 10]],
+        [[1, 2, 6, 10], [5, 6, 7, 9], [2, 6, 10, 11], [3, 5, 6, 7]],
+        [[1, 4, 5, 6], [1, 4, 5, 9], [4, 5, 6, 9], [1, 5, 6, 9]],
+        [[1, 2, 5, 6]],
     ]
 
     def __init__(self, x, y):
@@ -304,7 +311,7 @@ WHITE = '#%02x%02x%02x' % (255, 255, 255)
 GRAY = '#%02x%02x%02x' % (128, 128, 128)
 
 done = False
-fps = 60
+fps = 25
 game = Tetris(20, 10)
 counter = 0
 
@@ -386,8 +393,7 @@ brython_div <= score_doc
 doc.addEventListener("keydown", key_down)
 doc.addEventListener("keyup", key_up)
 browser.timer.set_interval(do_game, fps)
-</script>
-<br />w13 << <a href='w13.html'>Previous</a> <a href='tetris-add score.html'>Next</a> >> tetris-add score</div>
+</script><br />tetris-add score << <a href='tetris-add score.html'>Previous</a> <a href='W14.html'>Next</a> >> W14</div>
         
     <!-- footer -->
       <div class="container">
